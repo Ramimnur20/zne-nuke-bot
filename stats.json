@@ -1,0 +1,59 @@
+{
+  "users": {
+    "1408448935529287793": {
+      "uses": 2
+    },
+    "1444577245300785255": {
+      "uses": 2
+    },
+    "1398698616285040773": {
+      "uses": 1
+    },
+    "780938543610593292": {
+      "uses": 1
+    },
+    "1288144190299181099": {
+      "uses": 1
+    },
+    "1337767099283542026": {
+      "uses": 1
+    }
+  },
+  "servers": {
+    "1466840448390791353": {
+      "user_id": "1408448935529287793",
+      "member_count": 6,
+      "server_name": "\u2e38\u26e7\u02e2\u1d9c\u1d43\u02b3-\u1d5b\u1d49\u02e3\u02e3\u1d49\u1d48\u2e38\u26e7\u30c4 \u16c9's server"
+    },
+    "1443593218028474502": {
+      "user_id": "1444577245300785255",
+      "member_count": 1709,
+      "server_name": "Pyro \u00a7 | #2026"
+    },
+    "1467155231790993524": {
+      "user_id": "1398698616285040773",
+      "member_count": 6,
+      "server_name": "Dividends's server"
+    },
+    "1451474354725589117": {
+      "user_id": "780938543610593292",
+      "member_count": 11,
+      "server_name": "RAPED BY 767 DYSNOMIA"
+    },
+    "1467914603513122982": {
+      "user_id": "1288144190299181099",
+      "member_count": 9,
+      "server_name": "\ud835\ude34\ud835\ude36\ud835\ude2a\ud835\ude24\ud835\ude2a\ud835\ude25\ud835\ude26. szerveresdvbgretdbnret"
+    },
+    "1455693397389218010": {
+      "user_id": "1408448935529287793",
+      "member_count": 5,
+      "server_name": "sf"
+    },
+    "1433306927756083292": {
+      "user_id": "1444577245300785255",
+      "member_count": 24,
+      "server_name": "Wrestling MPire Remix Remastered"
+    }
+  }
+}
