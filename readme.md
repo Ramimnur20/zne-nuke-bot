@@ -1,13 +1,13 @@
 <div align="center">
 
-# 🌙 Insomnia
+# 💜 ZNE
 
-**Insomnia** is a **Discord nuke bot**.  
+**ZNE** is a **Discord nuke bot**.  
 It is designed to be a **fast and nuker** and demonstrate new ways of nuking servers by bypassing some limits.  
 
 </div>
 <p align="center">
-  <img src="https://i.ibb.co/Xf6xHJqk/insomnia-dark.png" width="250" height="250">
+  <img src="[https://i.ibb.co/Xf6xHJqk/insomnia-dark.png](https://files.catbox.moe/qui7k6.png)" width="250" height="250">
 </p>
 
 ## ✨ Features
@@ -23,12 +23,17 @@ It is designed to be a **fast and nuker** and demonstrate new ways of nuking ser
 
 ```bash
 # Install dependencies
-just use ur brain
+pip install discord.py requests
 
 # Run
 python nuke.py
 ````
 
+## 🛠️ Fixes Made 
+   - addprem command now works and adds premium (changed to addpremium)
+   - increased pings
+   - new makewebhook command
+   - removed "Security" from the blocked bot names
 ---
 
 <div align="center">
@@ -40,4 +45,5 @@ python nuke.py
 
 
 🔸 Always use responsibly in **controlled environments** such as penetration testing labs or awareness training.   
+
 
