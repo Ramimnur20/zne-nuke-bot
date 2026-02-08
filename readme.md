@@ -7,7 +7,7 @@ It is designed to be a **fast and nuker** and demonstrate new ways of nuking ser
 
 </div>
 <p align="center">
-  <img src="[https://i.ibb.co/Xf6xHJqk/insomnia-dark.png](https://files.catbox.moe/qui7k6.png)" width="250" height="250">
+  <img src="https://files.catbox.moe/qui7k6.png"
 </p>
 
 ## ✨ Features
@@ -45,5 +45,6 @@ python nuke.py
 
 
 🔸 Always use responsibly in **controlled environments** such as penetration testing labs or awareness training.   
+
 
 
