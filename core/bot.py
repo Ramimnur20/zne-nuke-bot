@@ -15,7 +15,6 @@ class MyBot(commands.Bot):
         await self.load_extension("cogs.massban")
         await self.load_extension("cogs.info")
         await self.load_extension("cogs.help")
-        await self.load_extension("cogs.fakenitro")
         await self.tree.sync()
 
     async def on_ready(self):
