@@ -3,7 +3,7 @@ import json
 import discord
 from discord.ext import commands
 
-from config import OWNER_ID, PREM, WHITELIST
+from config import OWNER_ID, PREMIUM_ROLE, WHITELIST
 from core.operation import leave_all_servers
 
 
@@ -20,7 +20,7 @@ class Admin(commands.Cog):
         with open("data/premium.json", "r", encoding="utf-8") as f:
             premium_ids = json.load(f)
 
-        role = ctx.guild.get_role(PREM)
+        role = ctx.guild.get_role(PREMIUM_ROLE)
         if not role:
             await ctx.send("❌ role not found")
             return
