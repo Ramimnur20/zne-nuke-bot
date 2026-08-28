@@ -1,8 +1,8 @@
 <div align="center">
 
-# 🌙 Insomnia
+# 😺 ZNE
 
-**Insomnia** is a **Discord nuke bot**.  
+**ZNE** is a **Discord nuke bot**.  
 It is designed to be a **fast and nuker** and demonstrate new ways of nuking servers by bypassing some limits.  
 
 </div>
@@ -23,10 +23,10 @@ It is designed to be a **fast and nuker** and demonstrate new ways of nuking ser
 
 ```bash
 # Install dependencies
-just use ur brain
+uv pip install -r requirements.txt
 
 # Run
-python nuke.py
+uv run main.py
 ````
 
 ---
