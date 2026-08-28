@@ -90,7 +90,7 @@ def set_show_username(user_id, value: bool):
 
 
 def get_channel_name(user_id):
-    return get_user_config(user_id).get("channel_name", "insomnia-on-top")
+    return get_user_config(user_id).get("channel_name", "zne-on-top")
 
 
 def set_channel_name(user_id, value: str):
@@ -98,7 +98,7 @@ def set_channel_name(user_id, value: str):
 
 
 def get_webhook_name(user_id):
-    return get_user_config(user_id).get("webhook_name", "insomnia")
+    return get_user_config(user_id).get("webhook_name", "zne")
 
 
 def set_webhook_name(user_id, value: str):
@@ -106,7 +106,7 @@ def set_webhook_name(user_id, value: str):
 
 
 def get_webhook_message(user_id):
-    return get_user_config(user_id).get("webhook_message", "insomnia owns this")
+    return get_user_config(user_id).get("webhook_message", "zne owns this")
 
 
 def set_webhook_message(user_id, value: str):
@@ -114,7 +114,7 @@ def set_webhook_message(user_id, value: str):
 
 
 def get_server_name(user_id):
-    return get_user_config(user_id).get("server_name", "insomnia owns this")
+    return get_user_config(user_id).get("server_name", "zne owns this")
 
 
 def set_server_name(user_id, value: str):
@@ -122,7 +122,7 @@ def set_server_name(user_id, value: str):
 
 
 def get_role_name(user_id):
-    return get_user_config(user_id).get("role_name", "join insomnia")
+    return get_user_config(user_id).get("role_name", "join zne")
 
 
 def set_role_name(user_id, value: str):

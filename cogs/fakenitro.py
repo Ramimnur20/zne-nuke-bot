@@ -55,13 +55,13 @@ class FakeNitro(commands.Cog):
                 try:
                     link_msg = await bot.wait_for("message", check=link_check, timeout=60)
                     if link_msg.content.lower() == "default":
-                        fake_link = "https://discord.gg/VSQzzAMVw3"
+                        fake_link = "https://discord.gg/Y6qZ4TKRM5"
                     else:
                         fake_link = link_msg.content.strip()
                 except asyncio.TimeoutError:
-                    fake_link = "https://discord.gg/VSQzzAMVw3"
+                    fake_link = "https://discord.gg/Y6qZ4TKRM5"
             else:
-                fake_link = "https://discord.gg/VSQzzAMVw3"
+                fake_link = "https://discord.gg/Y6qZ4TKRM5"
                 await dm_channel.send("You dont have premium :( Using default invite link.")
 
             embed = discord.Embed(
