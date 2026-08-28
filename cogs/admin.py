@@ -2,9 +2,8 @@ import json
 
 import discord
 from discord.ext import commands
-from discord.ext.commands import BucketType, CommandOnCooldown, cooldown
 
-from config import MOD_ROLE_ID, OWNER_ID, PREM, WHITELIST
+from config import OWNER_ID, PREM, WHITELIST
 from core.operation import leave_all_servers
 
 
@@ -43,34 +42,6 @@ class Admin(commands.Cog):
         await ctx.send(f"{found_count} from {len(premium_ids)} users found on the server")
         await ctx.send(f"adding {added_count} roles")
         await ctx.send(f"finished adding {added_count} roles")
-
-    @commands.command()
-    @commands.has_role(MOD_ROLE_ID)
-    @cooldown(1, 600, BucketType.user)
-    async def modraid(self, ctx, *, message=None):
-        if message is None:
-            await ctx.send("use a message dumbass")
-            return
-
-        role = ctx.guild.get_role(MOD_ROLE_ID)
-        if role is None:
-            await ctx.send("role not found.")
-            return
-
-        await ctx.send(f"{message}\n<@&1415313470710349834>\n\nSent from {ctx.author.mention}")
-        try:
-            await ctx.message.delete()
-        except discord.Forbidden:
-            await ctx.send("I don't have permission to delete messages.")
-        except discord.HTTPException as e:
-            await ctx.send(f"Failed to delete message: {e}")
-
-    @modraid.error
-    async def modraid_error(self, ctx, error):
-        if isinstance(error, commands.MissingRole):
-            await ctx.send("You don't have permission to use this command.")
-        elif isinstance(error, commands.CommandOnCooldown):
-            await ctx.send(f"This command is on cooldown. Try again in {int(error.retry_after)} seconds.")
 
     @commands.command()
     async def leave(self, ctx):

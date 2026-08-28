@@ -6,7 +6,6 @@ leaderboard_message = None
 NUKE_STATS_FILE = "nuke_stats.json"
 PREMIUM_FILE = "data/premium.json"
 PREM = 0
-MOD_ROLE_ID = 0
 WHITELIST = [
     0,
     0,
