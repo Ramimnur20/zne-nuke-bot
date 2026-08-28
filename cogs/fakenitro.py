@@ -1,5 +1,13 @@
+import asyncio
 
-@bot.command()
+import discord
+from discord.ext import commands
+from core.bot import bot
+from core.utils import is_premium_user
+
+from config import BLACKLISTED_GUILD_ID
+
+@commands.command()
 async def fakenitro(ctx):
     if ctx.guild and ctx.guild.id == BLACKLISTED_GUILD_ID:
         await ctx.reply("`this server is blacklisted`")
