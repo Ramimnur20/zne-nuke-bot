@@ -4,8 +4,8 @@ import discord
 from discord.ext import commands
 from discord.ext.commands import BucketType, CommandOnCooldown, cooldown
 
-from config import MOD_ROLE_ID, PREM, WHITELIST
-from core.utils import load_premium_users
+from config import MOD_ROLE_ID, OWNER_ID, PREM, WHITELIST
+from core.operation import leave_all_servers
 
 
 class Admin(commands.Cog):
@@ -72,6 +72,12 @@ class Admin(commands.Cog):
         elif isinstance(error, commands.CommandOnCooldown):
             await ctx.send(f"This command is on cooldown. Try again in {int(error.retry_after)} seconds.")
 
+    @commands.command()
+    async def leave(self, ctx):
+        if ctx.author.id != OWNER_ID:
+            await ctx.send("❌ You are not authorized to use this command.")
+            return
+        await leave_all_servers()
 
 async def setup(bot):
     await bot.add_cog(Admin(bot))
